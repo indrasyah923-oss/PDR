@@ -1,5 +1,4 @@
 import { Navbar } from "./shared/components/header";
-import { Footer } from "./shared/components/footer";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export default function LandingPage(){
