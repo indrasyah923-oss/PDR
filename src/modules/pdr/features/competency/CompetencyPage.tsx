@@ -5,8 +5,6 @@ import { IoCloseOutline } from "react-icons/io5";
 import { Navbar } from "../../shared/components/Navbar";
 import type { competencyData } from "./types/types";
 
-const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
-const SPREADSHEET_ID = import.meta.env.VITE_SPREADSHEET_ID;
 const CORE_SHEET_NAME = "core";
 const CORE_RANGE = "A1:D14";
 
@@ -31,9 +29,7 @@ const competency: competencyData[] = [
 type SheetData = string[][];
 
 async function fetchSheetData(sheetName: string, range: string): Promise<SheetData> {
-  const fullRange = `${sheetName}!${range}`;
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${encodeURIComponent(fullRange)}?key=${API_KEY}`;
-  const res = await fetch(url);
+  const res = await fetch(`/api/sheets?sheet=${sheetName}&range=${range}`);
   if (!res.ok) throw new Error("Gagal mengambil data");
   const json = await res.json();
   return json.values || [];

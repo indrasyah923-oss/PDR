@@ -76,8 +76,8 @@ export default function RingkasanPage() {
                 <tr className="bg-sky-50">
                   <th className="text-left px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm font-semibold text-gray-600 w-8 md:w-16">No.</th>
                   <th className="text-left px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm font-semibold text-gray-600">Competency Unit</th>
-                  <th className="text-center px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm font-semibold text-gray-600">Achievement</th>
-                  <th className="text-center px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm font-semibold text-gray-600 w-12 md:w-24">Bobot</th>
+                  <th className="text-center px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm font-semibold text-gray-600 w-16 md:w-48">Achievement</th>
+                  <th className="text-center px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm font-semibold text-gray-600 w-8 md:w-16">Bobot</th>
                   <th className="text-center px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm font-semibold text-gray-600 w-8 md:w-16">%</th>
                 </tr>
               </thead>

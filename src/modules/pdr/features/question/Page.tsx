@@ -6,8 +6,8 @@ export default function LandingPage(){
   const { state: karyawan } = useLocation();
 
   return(
-    <div className="max-w-screen min-h-screen flex flex-col">   
-      <Navbar centered name={karyawan?.name}
+    <div className="max-w-screen min-h-screen items-center justify-center md:max-w-xl md:mx-auto flex flex-col">   
+      <Navbar mobileCentered desktopCentered name={karyawan?.name}
   position={karyawan?.position}
   photo={karyawan?.photo}/>
       <div className="max-w-screen flex flex-col flex-1 px-6 py-6 gap-4 items-center justify-center text-center">
@@ -24,12 +24,12 @@ export default function LandingPage(){
         </div>
 
         {/* Teks paragraf */}
-        <p className="text-sm text-gray-600 text-center leading-relaxed">
+        <p className="text-md text-gray-600 text-center">
           Pastikan jawaban objektif berdasarkan pengamatan harian, bukti yang nyata, dan kasus-kasus yang telah diselesaikannya. Setiap saran yang anda berikan akan sangat berguna untuk perbaikan dan peningkatan karyawan.
         </p>
 
         {/* Info lewati jawaban */}
-        <p className="text-sm text-gray-500 text-center">
+        <p className="text-md text-gray-500 text-center">
           Lewati jawaban! Jika karyawan yang bersangkutan belum mendapatkan kesempatan / diperlukan untuk diterapkan di project yang di handle
         </p>
 
