@@ -180,12 +180,12 @@ export default function LandingPage() {
                         </div>
                       </div>
                     </td>
-                    <td className="px-1 md:px-6 align-middle text-center py-2 md:py-3 w-1/6">
+                    <td className="px-1 md:px-6 align-middle text-center py-2 md:py-3 w-1/4 md:w-1/6">
                       <span className={`text-[10px] md:text-xs px-1.5 md:px-3 py-0.5 md:py-1 rounded-lg ${getBadgeColor(k.competency)}`}>
                         {k.competency}%
                       </span>
                     </td>
-                    <td className="px-1 md:px-6 align-middle py-2 md:py-3 w-1/6">
+                    <td className="px-1 md:px-6 align-middle py-2 md:py-3 w-1/4 md:w-1/6">
                       <div className="flex items-center justify-start gap-1.5 md:gap-3">
                         <button
                           onClick={() => navigate(`/pdr/evaluation/${k.id}`, { state: k })}
