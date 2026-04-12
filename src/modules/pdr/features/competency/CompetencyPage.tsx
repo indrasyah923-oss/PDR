@@ -77,7 +77,7 @@ function SheetTable({ sheetName, range }: { sheetName: string; range: string }) 
 
   return (
     <div className="overflow-auto h-full">
-      <table className="w-full border-collapse">
+      <table className="max-w-full border-collapse">
         <thead>
           <tr>
             {header.map((col, i) => (
