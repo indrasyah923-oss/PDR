@@ -161,8 +161,8 @@ export default function LandingPage() {
             <thead>
               <tr className="border-b border-gray-100">
                 <th className="text-left px-2 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold bg-gray-100 text-gray-600 w-2/3">Nama Karyawan</th>
-                <th className="text-center px-1 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold bg-gray-100 text-gray-600 w-1/6">Competency</th>
-                <th className="text-left px-1 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold bg-gray-100 text-gray-600 w-1/6">Aksi</th>
+                <th className="text-center px-2 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold bg-gray-100 text-gray-600 w-1/6">Competency</th>
+                <th className="text-left px-2 md:px-6 py-2 md:py-3 text-xs md:text-sm font-semibold bg-gray-100 text-gray-600 w-1/6">Aksi</th>
               </tr>
             </thead>
           </table>
