@@ -4,7 +4,7 @@ export default function MobileDone() {
     const { state: karyawan } = useLocation();
     const navigate = useNavigate();
     return(
-        <div className="w-screen h-screen md:max-w-md flex flex-col items-center justify-center px-8 text-center gap-6">
+        <div className="w-screen h-screen md:max-w-md md:mx-auto flex flex-col items-center justify-center px-8 text-center gap-6">
             
             {/* Logo + User */}
             <div className="flex flex-col items-center gap-2">
