@@ -118,7 +118,7 @@ export default function RingkasanPage() {
           <div className="px-3 md:px-6 py-4">
             {/* Tombol */}
             <div className="flex gap-2 md:gap-3 py-2">
-              <button onClick={() => navigate('/pertanyaan')} className="flex items-center gap-1 md:gap-2 bg-cyan-600 text-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg text-[10px] md:text-sm font-medium">
+              <button  className="flex items-center gap-1 md:gap-2 bg-cyan-600 text-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg text-[10px] md:text-sm font-medium">
                 <IoEyeOutline className="text-sm md:text-base" /> Tampilkan semua pertanyaan
               </button>
               <button className="flex items-center gap-1 md:gap-2 bg-cyan-600 text-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg text-[10px] md:text-sm font-medium">
