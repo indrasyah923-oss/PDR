@@ -94,7 +94,7 @@ function SheetTable({ sheetName, range }: { sheetName: string; range: string }) 
           {rows.map((row, ri) => (
             <tr key={ri} className={ri % 2 === 0 ? "bg-white" : "bg-gray-50"}>
               {header.map((_, ci) => (
-                <td key={ci} className="px-4 py-2 border border-gray-200 align-top text-[10px] md:text-sm">
+                <td key={ci} className="px-4 py-2 border border-gray-200 align-top text-[10px] md:text-sm whitespace-pre-wrap">
                   {row[ci] ?? ""}
                 </td>
               ))}
