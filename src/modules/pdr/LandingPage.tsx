@@ -166,7 +166,7 @@ export default function LandingPage() {
               </tr>
             </thead>
           </table>
-          <div className="overflow-y-auto max-h-[300px]">
+          <div className="overflow-y-auto max-h-[280px] md:max-h-[300px]">
             <table className="w-full table-fixed">
               <tbody className="divide-y divide-gray-50">
                 {displayedEmployees.map((k) => (
