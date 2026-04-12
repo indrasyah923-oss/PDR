@@ -171,7 +171,7 @@ export default function LandingPage() {
               <tbody className="divide-y divide-gray-50">
                 {displayedEmployees.map((k) => (
                   <tr key={k.id} className="hover:bg-gray-50 transition">
-                    <td className={`px-2 md:px-6 py-2 md:py-3 w-2/3 ${indentMap[k.level]}`}>
+                    <td className={`px-2 md:px-6 py-2 md:py-3 w-2/4 md:w-2/3 ${indentMap[k.level]}`}>
                       <div className="flex items-center gap-1.5 md:gap-3">
                         <img src={k.photo || "https://i.pravatar.cc/36"} alt={k.name} className="w-7 h-7 md:w-9 md:h-9 rounded-full object-cover shrink-0" />
                         <div>
