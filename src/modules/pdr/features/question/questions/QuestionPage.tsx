@@ -34,7 +34,13 @@ const initialPilihan: ChoosenAnswer[] = [
         tanggal: "13 Feb 2026",
       },
       {
-        nama: "Budi Santoso",
+        nama: "ilham ramadhan",
+        foto: "https://i.pravatar.cc/32?img=3",
+        catatan: "Karyawan ini kadang-kadang menunjukkan semangat yang baik.",
+        tanggal: "14 Feb 2026",
+      },
+      {
+        nama: "agus setiawan",
         foto: "https://i.pravatar.cc/32?img=3",
         catatan: "Karyawan ini kadang-kadang menunjukkan semangat yang baik.",
         tanggal: "14 Feb 2026",
