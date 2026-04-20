@@ -25,7 +25,7 @@ export function Navbar({
   const textAlign = isDesktopCentered ? "md:items-start" : "";
 
   return (
-    <div className={`h-full pt-2 px-4 max-w-screen  md:px-48 flex flex-col ${direction} ${alignMobile} ${alignDesktop}`}>
+    <div className={`pt-2 px-4 max-w-screen  md:px-48 flex flex-col ${direction} ${alignMobile} ${alignDesktop}`}>
       <h1 className="text-6xl py-2  px-2 md:px-0 font-bold bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">venturo</h1>
       <div className={`flex h-auto items-center flex-row-reverse ${userInfoDirection} gap-3`}>
         <div className={`flex py-2 md:py-0 px-2 md:px-0 flex-col ${isMobileCentered || isDesktopCentered ? "items-center" : ""} ${textAlign}`}>

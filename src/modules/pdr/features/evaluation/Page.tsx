@@ -1,5 +1,7 @@
-import { IoLinkOutline, IoEyeOutline, IoPeopleOutline } from "react-icons/io5";
+import { IoEyeOutline, IoPeopleOutline } from "react-icons/io5";
 import { useNavigate, useLocation } from "react-router-dom";
+import { SummaryTable } from "./components/SummaryTable";
+import { CompetencyList } from "./components/CompetencyList";
 import type { DataSummaryType, CompetencyDataType } from "./types";
 
 const DataSummary: DataSummaryType[] = [
@@ -18,19 +20,6 @@ const competencyData: CompetencyDataType[] = [
   { label: "(Restropective | Leadership)", score: 75 },
   { label: "(Coaching | Leadership)", score: 50 },
 ];
-
-function getBarColor(score: number) {
-  if (score === 0) return "bg-gray-400";
-  if (score < 60) return "bg-red-300";
-  if (score < 75) return "bg-yellow-200";
-  return "bg-yellow-300";
-}
-
-function getScoreBadge(score: number) {
-  if (score === 0) return "text-gray-500";
-  if (score < 60) return "bg-red-100";
-  return "bg-yellow-100";
-}
 
 function hitungSkorKompetensi(data: DataSummaryType[]) {
   const totalBobot = data.reduce((acc, d) => acc + d.bobot, 0);
@@ -69,77 +58,19 @@ export default function RingkasanPage() {
             <p className="font-semibold pb-4 text-xs md:text-base text-gray-700">
               Ringkasan Diagnosa dari Semua Pertanyaan
             </p>
-
-            {/* Tabel */}
-            <table className="w-full">
-              <thead>
-                <tr className="bg-sky-50">
-                  <th className="text-left px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm font-semibold text-gray-600 w-8 md:w-16">No.</th>
-                  <th className="text-left px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm font-semibold text-gray-600">Competency Unit</th>
-                  <th className="text-center px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm font-semibold text-gray-600 w-16 md:w-48">Achievement</th>
-                  <th className="text-center px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm font-semibold text-gray-600 w-8 md:w-16">Bobot</th>
-                  <th className="text-center px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm font-semibold text-gray-600 w-8 md:w-16">%</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-50">
-                {DataSummary.map((row) => {
-                  const persen = row.achievement === 0 ? "-" : `${Math.round((row.achievement * row.bobot) / 100)}%`;
-                  const barWidth = row.achievement === 0 ? 100 : row.achievement;
-                  return (
-                    <tr key={row.no}>
-                      <td className="px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm text-gray-500">{row.no}.</td>
-                      <td className="px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm text-gray-700">{row.unit}</td>
-                      <td className="px-2 md:px-6 py-2 md:py-3">
-                        <div className="relative w-full h-4 md:h-6 bg-gray-100 rounded-full">
-                          <div className={`h-full rounded ${getBarColor(row.achievement)}`} style={{ width: `${barWidth}%` }} />
-                          <span className="absolute top-0 flex items-center justify-center h-full text-[10px] md:text-xs font-semibold text-gray-700" style={{ width: `${barWidth}%` }}>
-                            {row.achievement}%
-                          </span>
-                        </div>
-                      </td>
-                      <td className="px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm text-center text-gray-600">{row.bobot}</td>
-                      <td className="px-2 md:px-6 py-2 md:py-3 text-[10px] md:text-sm text-center text-gray-600">{persen}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-
-            {/* Skor Kompetensi */}
-            <div className="flex justify-end items-center bg-sky-50 gap-3 md:gap-4 px-3 md:px-6 py-3 md:py-4 border-b border-gray-200">
-              <div className="text-right">
-                <p className="text-[10px] md:text-sm text-gray-700">Skor Kompetensi</p>
-                <p className="text-[9px] md:text-xs text-gray-400">(berkontribusi 30% terhadap performance score)</p>
-              </div>
-              <span className="text-base md:text-xl text-gray-800">{skorKompetensi}%</span>
-            </div>
+            <SummaryTable data={DataSummary} competencyScore={skorKompetensi} />
           </div>
 
           <div className="px-3 md:px-6 py-4">
-            {/* Tombol */}
             <div className="flex gap-2 md:gap-3 py-2">
-              <button  className="flex items-center gap-1 md:gap-2 bg-cyan-600 text-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg text-[10px] md:text-sm font-medium">
+              <button className="flex items-center gap-1 md:gap-2 bg-cyan-600 text-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg text-[10px] md:text-sm font-medium">
                 <IoEyeOutline className="text-sm md:text-base" /> Tampilkan semua pertanyaan
               </button>
               <button className="flex items-center gap-1 md:gap-2 bg-cyan-600 text-white px-2 md:px-4 py-1.5 md:py-2 rounded-lg text-[10px] md:text-sm font-medium">
                 <IoPeopleOutline className="text-sm md:text-base" /> Koresponden (1)
               </button>
             </div>
-
-            {/* List Pertanyaan */}
-            <div className="flex gap-2 flex-col">
-              {competencyData.map((p, i) => (
-                <div key={i} className="bg-sky-50 border-b rounded border-gray-200 px-3 md:px-6 py-2 md:py-4 flex items-center justify-between">
-                  <div className="flex items-center gap-1 md:gap-2 min-w-0">
-                    <span className="text-[10px] md:text-sm text-gray-600 truncate">{p.label}</span>
-                    <IoLinkOutline className="text-gray-400 shrink-0 text-xs md:text-base" />
-                  </div>
-                  <span className={`text-[10px] md:text-xs font-semibold px-1.5 md:px-2 py-0.5 md:py-1 rounded shrink-0 ml-2 ${getScoreBadge(p.score)}`}>
-                    {p.score === 0 ? "0%" : `${p.score}%`}
-                  </span>
-                </div>
-              ))}
-            </div>
+            <CompetencyList data={competencyData} />
           </div>
         </div>
       </div>
