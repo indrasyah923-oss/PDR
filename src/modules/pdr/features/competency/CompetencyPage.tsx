@@ -45,7 +45,7 @@ function SheetTable({ sheetName, range }: { sheetName: string; range: string }) 
     setError(null);
     fetchSheetData(sheetName, range)
       .then((data) => {
-      console.log("data:", JSON.stringify(data)); // ← tambah di sini
+      console.log("data:", JSON.stringify(data));
       setData(data);
     })
       .catch(() => setError("Gagal memuat data. Periksa konfigurasi API Key atau Range."))
