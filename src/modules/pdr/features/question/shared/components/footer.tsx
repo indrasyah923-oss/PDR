@@ -8,12 +8,12 @@ interface FooterProps {
 
 export function Footer({ onNext, onPrev, current, total }: FooterProps) {
   return (
-    <div className="w-full bottom-0 sticky h-[4rem] md:h-auto bg-cyan-600">
-      <div className="flex items-center h-full md:h-auto bottom-0 mx-12 justify-between">
+    <div className="w-full bottom-0 sticky h-[4rem]  bg-cyan-600">
+      <div className="flex items-center h-full  bottom-0 mx-12 justify-between">
         <div>
           <button
             onClick={onPrev}
-            className="w-[4rem] h-[2rem] md:h-auto bg-white rounded-sm text-sm"
+            className="w-[4rem] h-[2rem]  bg-white rounded-sm text-sm"
           >
             &lt;
           </button>

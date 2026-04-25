@@ -7,7 +7,7 @@ export default function MobileDone() {
     return(
         <div className="w-screen h-screen md:max-w-md md:mx-auto flex flex-col items-center justify-center px-8 text-center gap-6">
             
-           <Navbar mobileCentered desktopCentered name={karyawan?.name}
+           <Navbar name={karyawan?.name}
              position={karyawan?.position}
              photo={karyawan?.photo}/>
 

@@ -42,5 +42,11 @@ export const pdrMenuItems: MenuItem = {
       href: "/pdr/Done",
       component: () => import("@/modules/pdr/features/question/Done/Done"),
     },
+    {
+      id: "pdr-auth",
+      label: "Authentication",
+      href: "/pdr/auth",
+      component: () => import("@/modules/pdr/features/auth/page"),
+    },
   ],
 };

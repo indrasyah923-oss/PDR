@@ -10,18 +10,16 @@ const CORE_RANGE = "A1:D14";
 
 const competency: competencyData[] = [
   {
-    group: "Operasional",
-    items: ["CTO", "Accounting"],
+    group: "Software",
+    items: ["Project Manager", "Tech Lead", "Programmer", "QA Engineer"],
   },
   {
     group: "Business",
     items: [
-      "Marketing",
+      "BA",
+      "UI/UX",
+      "Sales",
       "Multimedia",
-      "Project Manager",
-      "Lead Programmer",
-      "Web Programmer",
-      "Mobile Programmer",
     ],
   },
 ];
