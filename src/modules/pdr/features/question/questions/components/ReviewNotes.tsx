@@ -12,7 +12,7 @@ export function ReviewNotes({ voters, index, onPrev, onNext }: ReviewNotesProps)
   const current = voters[index];
 
   return (
-    <div className="mt-4 md:hidden border border-gray-200 rounded-xl p-4 bg-gray-50 shadow-sm">
+    <div className="mt-4 border border-gray-200 rounded-xl p-4 bg-gray-50 shadow-sm">
       <div className="flex justify-between items-center mb-3">
         <p className="text-sm font-bold text-gray-800">Review Notes</p>
         <div className="flex items-center gap-2">
