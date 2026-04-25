@@ -82,24 +82,24 @@ export default function QuestionPage() {
             {currentQuestion.Question}
           </p>
 
-          <div className="flex flex-col gap-2 md:max-w-lg">
+          <div className="flex flex-col gap-2 ">
             {choice.map((p) => (
               <div key={p.label}>
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => handleJawaban(p.label)}
-                    className={`flex justify-between items-center w-full md:max-w-md font-medium text-cyan-600 border border-cyan-600 py-2 px-4 rounded-md transition ${answer === p.label ? "bg-cyan-50" : "bg-white"}`}
+                    className={`flex justify-between items-center w-full font-medium text-cyan-600 border border-cyan-600 py-2 px-4 rounded-md transition ${answer === p.label ? "bg-cyan-50" : "bg-white"}`}
                   >
                     <span className="text-sm">{p.label}</span>
                   </button>
                   {answer === p.label && (
-                    <button className="hidden md:block" onClick={() => setModalPilihan(p.label)}>
+                    <button className="hidden " onClick={() => setModalPilihan(p.label)}>
                       <IoDocumentTextOutline className="text-gray-500 text-xl hover:text-cyan-600" />
                     </button>
                   )}
                 </div>
                 {answer === p.label && (
-                  <div className="mt-2 md:hidden border border-gray-200 rounded-xl p-4 bg-white shadow-sm">
+                  <div className="mt-2  border border-gray-200 rounded-xl p-4 bg-white shadow-sm">
                     <p className="text-sm font-semibold text-gray-700 mb-2">Catatan</p>
                     <textarea
                       className="w-full text-sm text-gray-600 resize-none focus:outline-none border border-gray-100 rounded-lg p-2 h-12"
@@ -122,9 +122,9 @@ export default function QuestionPage() {
             />
           )}
 
-          <div className="flex hidden md:display gap-2 items-start mt-6 md:mt-8">
+          <div className="flex hidden  gap-2 items-start mt-6 ">
             <span className="inline-flex items-center justify-center w-4 h-4 bg-gray-700 text-white rounded-full text-xs shrink-0 mt-0.5">i</span>
-            <p className="text-xs md:text-sm text-gray-500 max-w-xl">
+            <p className="text-xs  text-gray-500 max-w-xl">
               Lewati jawaban! Jika karyawan yang bersangkutan belum mendapatkan kesempatan / diperlukan untuk diterapkan di project yang di handle
             </p>
           </div>
@@ -132,7 +132,7 @@ export default function QuestionPage() {
       </div>
 
       {modalPilihan && pilihanModal && (
-        <div className="hidden md:flex fixed inset-0 bg-black/50 items-center justify-center z-50">
+        <div className="hidden  fixed inset-0 bg-black/50 items-center justify-center z-50">
           <div className="bg-white rounded-xl shadow-lg h-auto w-xl">
             <div className="flex w-full justify-between border-b border-gray-300 items-center p-4 mb-4">
               <p className="font-semibold text-gray-800">Catatan</p>
