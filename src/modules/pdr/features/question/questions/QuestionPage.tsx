@@ -73,7 +73,7 @@ export default function QuestionPage() {
 
   return (
     <div className="min-w-screen min-h-screen bg-gray-200 flex items-center justify-center">
-    <div className="max-w-sm min-h-screen bg-white flex flex-col justify-center items-center justify-between px-0 py-6">
+    <div className="max-w-sm h-auto bg-white flex flex-col justify-center items-center justify-between px-0 py-6">
       <Navbar name={karyawan?.name} position={karyawan?.position} photo={karyawan?.photo} />
 
       <div className="relative w-full flex-1 flex flex-col ">
