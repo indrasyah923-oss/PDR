@@ -72,12 +72,13 @@ export default function QuestionPage() {
   const isLastQuestion = questionIndex === QuestionList.length - 1;
 
   return (
-    <div className="max-w-screen min-h-screen flex flex-col">
+    <div className="min-w-screen min-h-screen bg-gray-200 flex items-center justify-center">
+    <div className="max-w-sm min-h-screen bg-white flex flex-col justify-center items-center justify-between px-0 py-6">
       <Navbar name={karyawan?.name} position={karyawan?.position} photo={karyawan?.photo} />
 
-      <div className="relative flex-1 flex flex-col md:block">
-        <div className="flex flex-col px-4 py-6 md:px-48 md:py-8">
-          <p className="text-base md:text-lg font-medium text-gray-700 mb-6 md:max-w-5xl">
+      <div className="relative w-full flex-1 flex flex-col ">
+        <div className="flex flex-col px-4 py-4 ">
+          <p className="text-sm  font-semibold text-gray-700 mb-6">
             {currentQuestion.Question}
           </p>
 
@@ -158,6 +159,7 @@ export default function QuestionPage() {
         current={questionIndex + 1}
         total={QuestionList.length}
       />
+    </div>
     </div>
   );
 }
